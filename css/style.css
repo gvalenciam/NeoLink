@@ -1,0 +1,149 @@
+html {
+  font-size: 62.5%; /* Now 10px = 1rem! */
+}
+
+body {
+  font-size: 16px; /* px fallback */
+  font-size: 1.6rem; /* default font-size for document */
+  line-height: 1; /* a nice line-height */
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "Museo100";
+  src: url("../font/MuseoSans100.otf");
+}
+
+@font-face {
+  font-family: "Museo300";
+  src: url("../font/MuseoSans300.otf");
+}
+
+@font-face {
+  font-family: "Museo500";
+  src: url("../font/MuseoSans500.otf");
+}
+
+@font-face {
+  font-family: "Museo700";
+  src: url("../font/MuseoSans700.otf");
+}
+
+:root {
+  --colorPlomoSuave: #b3b3b3;
+  --colorPlomoFondo: #f8f8f8;
+  --colorPlomoFooter: #efefef;
+  --colorSubtituloLogo: #454545;
+  --fuentePrincipal: "Museo100";
+  --fuenteSecundaria: "Museo300";
+  --fuenteBold: "Museo500";
+  --fuenteBoldest: "Museo700";
+  --tamanoTitulo: 4.2rem; /*Rios danzantes --> Base 1024px*/
+  --tamanoTituloMult1024: 1.1; /* 1024px */
+  --tamanoTituloMult1200: 1.1; /* 1200px */
+  --tamanoTituloMult1440: 1.4; /* 1440px */
+  --tamanoTituloMult1920: 1.8; /* 1920px */
+  --tamanoTituloMult2560: 2.25; /* 2560px */
+  --tamanoTexto: 1.5rem; /*La ciencia del movimiento  --> Base 1024px*/
+  --tamanoTextoMult1024: 1.4; /* 1024px */
+  --tamanoTextoMult1200: 1.5; /* 1200px */
+  --tamanoTextoMult1440: 1.75; /* 1440px */
+  --tamanoTextoMult1920: 2.25; /* 1920px */
+  --tamanoTextoMult2560: 3; /* 1920px */
+}
+
+.contenedor-principal .texto {
+  font-family: var(--fuentePrincipal);
+}
+
+@media (min-width: 1024px) {
+  .contenedor-principal .texto {
+    font-size: calc(var(--tamanoTexto) * var(--tamanoTextoMult1024));
+  }
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1440px) {
+}
+@media (min-width: 1920px) {
+}
+@media (min-width: 2560px) {
+}
+
+/***********************************************************************************************************/
+/**************************************************** LOGIN ************************************************/
+/***********************************************************************************************************/
+.contenedor-principal {
+  height: 100vh;
+  width: 100vw;
+}
+.contenedor-log-in {
+  background-size: cover;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6937149859943977) 0%,
+      rgba(0, 0, 0, 0.39119397759103647) 33%,
+      rgba(19, 19, 19, 0.13068977591036413) 66%,
+      rgba(31, 31, 31, 0) 100%
+    ),
+    url("/img/fondo_logIn.jpg");
+}
+.contenedor-formulario {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-formulario .titulo-campo-formulario {
+  font-family: var(--fuenteSecundaria);
+  color: white;
+}
+.formulario .form-group .campo-formulario {
+  border: none;
+}
+.formulario {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 1024px) {
+  .formulario {
+    padding: 10rem 8rem;
+  }
+  .contenedor-formulario .titulo-campo-formulario {
+    padding: 0 0 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .formulario .form-group .campo-formulario {
+    margin-bottom: 3rem;
+    padding: 2rem 4rem 2rem 2rem;
+    border-radius: 1.5rem;
+    font-size: calc(var(--tamanoTexto) * var(--tamanoTextoMult1024) - 0.25rem);
+  }
+  .formulario .ingresar {
+    font-size: calc(var(--tamanoTexto) * var(--tamanoTextoMult1024) - 0.25rem);
+    padding: 1rem 4rem;
+    border-radius: 6rem;
+  }
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1440px) {
+}
+@media (min-width: 1920px) {
+}
+@media (min-width: 2560px) {
+}
