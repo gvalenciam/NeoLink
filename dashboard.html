@@ -21,11 +21,29 @@
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="https://d3js.org/d3.v4.min.js"></script>
   </head>
   <body>
-    <div class="wrapper d-flex align-items-stretch">
-      <nav id="sidebar">
+    <!-- <div class="contenedor-principal">
+      <nav class="sidebar">
         <div class="p-4 pt-5">
           <a
             href="#"
@@ -39,31 +57,11 @@
             <li>
               <a href="#">Configuración</a>
             </li>
-            <!-- <li>
-              <a
-                href="#pageSubmenu"
-                data-toggle="collapse"
-                aria-expanded="false"
-                class="dropdown-toggle"
-                >Pages</a
-              >
-              <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                  <a href="#">Page 1</a>
-                </li>
-                <li>
-                  <a href="#">Page 2</a>
-                </li>
-                <li>
-                  <a href="#">Page 3</a>
-                </li>
-              </ul>
-            </li> -->
           </ul>
         </div>
       </nav>
 
-      <!-- Page Content  -->
+      
       <div id="content" class="p-4 p-md-5">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
@@ -96,14 +94,151 @@
           </div>
         </nav>
 
-        <svg id="grafico1" width="960" height="500"></svg>
+        <div class="contenedor-seccion-graficos">
+          <div class="lista-graficos">
+            <nav id="sidebar" class="lista-graficos">
+              <div class="p-4 pt-5">
+                <ul class="list-unstyled components mb-5">
+                  <li>
+                    <a
+                      href="#pageSubmenu"
+                      data-toggle="collapse"
+                      aria-expanded="false"
+                      class="dropdown-toggle"
+                      >Fundo 1</a
+                    >
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                      <li>
+                        <a href="#">Nodo 1A</a>
+                      </li>
+                      <li>
+                        <a href="#">Nodo 1B</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="#pageSubmenu"
+                      data-toggle="collapse"
+                      aria-expanded="false"
+                      class="dropdown-toggle"
+                      >Fundo 2</a
+                    >
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                      <li>
+                        <a href="#">Nodo 2A</a>
+                      </li>
+                      <li>
+                        <a href="#">Nodo 2B</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="graficos">
+            <svg id="grafico1" width="960" height="500"></svg>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="contenedor-dashboard">
+      <nav id="sidebarMenus" class="sidebar">
+        <img src="img/usuario.png" alt="imagen-perfil" class="imagen-perfil" />
+        <ul class="lista-menus">
+          <li>
+            <a href="#">Gráficos</a>
+          </li>
+          <li>
+            <a href="#">Configuración</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="contenido">
+        <div id="navbar-dashboard" class="navbar-dashboard">
+          <div class="contenedor-boton-sidebar">
+            <img
+              id="boton-sidebar"
+              src="/img/icono_menu.png"
+              alt="boton-sidebar"
+              class="boton-sidebar"
+            />
+          </div>
+          <h1 class="titulo-navbar">NeoLink</h1>
+        </div>
+        <div class="contenedor-seccion-graficos">
+          <div class="lista-fundos">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link boton-fundo"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Fundo 1
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="contenido-nodos collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <div class="boton-nodo">Nodo 1A</div>
+                    <div class="boton-nodo">Nodo 1B</div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed boton-fundo"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Fundo 2
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse contenido-nodos"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    <div class="boton-nodo">Nodo 2A</div>
+                    <div class="boton-nodo">Nodo 2B</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="graficos">
+            <svg class="grafico" id="grafico1" width="750" height="500"></svg>
+          </div>
+        </div>
       </div>
     </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
     <script src="js/graph.js"></script>
   </body>
 </html>
