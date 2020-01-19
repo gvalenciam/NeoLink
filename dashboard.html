@@ -236,7 +236,137 @@
             <h1>IMAGENES</h1>
           </div>
           <div id="seccion-configuracion" class="seccion">
-            <h1>CONFIGURACION</h1>
+            <div class="contenedor-usuario">
+              <img src="img/usuario.png" alt="imagen-perfil" class="imagen-perfil imagen-perfil-usuario" />
+              <div class="informacion-usuario">
+                <div class="nombre contenedor-informacion-usuario">
+                  <p class="placeholder">Usuario: </p>
+                  <p class="nombre descripcion">Neolink</p>
+                </div>
+                <div class="organizacion contenedor-informacion-usuario">
+                  <p class="placeholder">Organización: </p>
+                  <p class="organizacion descripcion">NeoLink</p>
+                </div>
+                <div class="email contenedor-informacion-usuario">
+                  <p class="placeholder">Email: </p>
+                  <p class="email descripcion">neolink@neolink.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="contenedor-nodos-sensores">
+              <div class="nodos">
+                <div class="accordion" id="accordionExampleNodos">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link boton-fundo"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapse-nodo-1"
+                          aria-expanded="true"
+                          aria-controls="collapse-nodo-1"
+                        >
+                          Nodo 1
+                        </button>
+                      </h2>
+                    </div>
+  
+                    <div
+                      id="collapse-nodo-1"
+                      class="collapse show"
+                      aria-labelledby="headingOne"
+                      data-parent="#accordionExampleNodos"
+                    >
+                      <div class="card-body contenido-nodos">
+                        <div class="contenido">
+                          <p class="ubicacion placeholder">Ubicación: </p>
+                          <p class="descripcion">Ubicación Nodo 1</p>
+                        </div>
+                        <div class="contenido">
+                          <p class="nombre placeholder">Nombre: </p>
+                          <p class="descripcion">Nombre Nodo 1</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed boton-fundo"
+                          type="button"
+                          data-toggle="collapse"
+                          data-target="#collapse-nodo-2"
+                          aria-expanded="false"
+                          aria-controls="collapse-nodo-2"
+                        >
+                          Nodo 2
+                        </button>
+                      </h2>
+                    </div>
+                    <div
+                      id="collapse-nodo-2"
+                      class="collapse"
+                      aria-labelledby="headingTwo"
+                      data-parent="#accordionExampleNodos"
+                    >
+                      <div class="card-body contenido-nodos">
+                        <div class="contenido">
+                          <p class="ubicacion placeholder">Ubicación: </p>
+                          <p class="descripcion">Ubicación Nodo 2</p>
+                        </div>
+                        <div class="contenido">
+                          <p class="nombre placeholder">Nombre: </p>
+                          <p class="descripcion">Nombre Nodo 2</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sensores">
+                <div class="contenedor-lista-sensores">
+                  <ul class="lista-sensores">
+                    <li class="sensor">
+                      <p class="nombre-sensor">Sensor 1</p>
+                      <ul class="informacion">
+                        <li class="propiedad">
+                          <div class="contenido">
+                            <p class="placeholder">ID: </p>
+                            <p class="descripcion">ID Sensor 1 Nodo 1</p>
+                          </div>
+                        </li>
+                        <li class="propiedad">
+                          <div class="contenido">
+                            <p class="placeholder">Profunidad: </p>
+                            <p class="descripcion">Profundidad Sensor 1 Nodo 1</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sensor">
+                      <p class="nombre-sensor">Sensor 2</p>
+                      <ul class="informacion">
+                        <li class="propiedad">
+                          <div class="contenido">
+                            <p class="placeholder">ID: </p>
+                            <p class="descripcion">ID Sensor 2 Nodo 1</p>
+                          </div>
+                        </li>
+                        <li class="propiedad">
+                          <div class="contenido">
+                            <p class="placeholder">Profunidad: </p>
+                            <p class="descripcion">Profundidad Sensor 2 Nodo 1</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

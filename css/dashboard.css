@@ -1,15 +1,37 @@
-/*!
- * Bootstrap v4.3.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+@font-face {
+  font-family: "Museo100";
+  src: url("../../font/MuseoSans100.otf");
+}
+
+@font-face {
+  font-family: "Museo300";
+  src: url("../../font/MuseoSans300.otf");
+}
+
+@font-face {
+  font-family: "Museo500";
+  src: url("../../font/MuseoSans500.otf");
+}
+
+@font-face {
+  font-family: "Museo700";
+  src: url("../../font/MuseoSans700.otf");
+}
+
+@font-face {
+  font-family: "SpecialElite";
+  src: url("../../font/SpecialElite-Regular.ttf");
+}
+
 :root {
   --colorPrincipal: #31618c;
   --colorPlomoSuave: #aaaaaa;
   --colorPlomoFondo: #f8f8f8;
   --colorPlomoFooter: #efefef;
-
+  --fuentePrincipal: "Museo100";
+  --fuenteSecundaria: "Museo300";
+  --fuenteBold: "Museo500";
+  --fuenteBoldest: "Museo700";
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -11071,6 +11093,152 @@ font-size: 1.6rem;
 
 /***********************************************************************************************************/
 /******************************************* SECCION GRAFICOS **********************************************/
+/***********************************************************************************************************/
+
+/***********************************************************************************************************/
+/***************************************** SECCION CONFIGURACION *******************************************/
+/***********************************************************************************************************/
+.contenedor-usuario{
+display: flex;
+align-items: center;
+padding: 4rem;
+}
+
+.imagen-perfil-usuario{
+  margin: 0 4rem 0 0;
+}
+
+.informacion-usuario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenedor-informacion-usuario{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.contenedor-informacion-usuario:last-of-type{
+  margin-bottom: 0;
+}
+
+.contenedor-informacion-usuario .placeholder{
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-family: var(--fuenteBold);
+  color: black;
+}
+
+.contenedor-informacion-usuario .descripcion{
+  font-size: 2rem;
+  margin: 0;
+  font-family: var(--fuenteSecundaria);
+  color: var(--colorPrincipal);
+}
+
+.contenedor-nodos-sensores{
+  display: flex;
+}
+
+.contenedor-nodos-sensores .nodos{
+  width: 50%;
+  padding: 0 2rem 4rem 4rem;
+}
+
+.contenedor-nodos-sensores .contenido-nodos{
+  padding: 2rem !important;
+}
+
+.contenedor-nodos-sensores .contenido-nodos .contenido{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.contenedor-nodos-sensores .contenido-nodos .contenido:last-of-type{
+  margin-bottom: 0;
+}
+
+.contenedor-nodos-sensores .contenido-nodos .placeholder{
+  font-size: 2rem;
+  margin-right: 1rem;
+  font-family: var(--fuenteBold);
+  color: black;
+}
+
+.contenedor-nodos-sensores .contenido-nodos .descripcion{
+  font-size: 2rem;
+  margin: 0;
+  font-family: var(--fuenteSecundaria);
+  color: var(--colorPrincipal);
+}
+
+.contenedor-nodos-sensores .sensores{
+  width: 50%;
+  padding: 2rem 4rem 4rem 2rem;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores{
+  list-style: none;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor{
+  margin-bottom: 2rem;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor::before{
+  position: absolute;
+  content: "\2022";  
+  color: var(--colorPrincipal); 
+  font-weight: bold; 
+  display: inline-block;
+  width: 1em; 
+  margin-left: -1em; 
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor:last-of-type{
+  margin-bottom: 0;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor .nombre-sensor{
+  font-size: 1.8rem;
+  font-family: var(--fuenteBoldest);
+  margin-bottom: 1.5rem;
+  color: var(--colorPrincipal);
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor .informacion{
+  list-style: none;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor .informacion .propiedad{
+  margin-bottom: 1rem;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor .informacion .propiedad:last-of-type{
+  margin-bottom: 0;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor .propiedad .contenido{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor .contenido .placeholder{
+  font-size: 1.6rem;
+  margin-right: 1rem;
+  font-family: var(--fuenteBold);
+  color: black;
+}
+
+.contenedor-nodos-sensores .sensores .lista-sensores .sensor .contenido .descripcion{
+  font-size: 1.6rem;
+  margin: 0;
+  font-family: var(--fuenteSecundaria);
+  color: var(--colorPrincipal);
+}
+/***********************************************************************************************************/
+/***************************************** SECCION CONFIGURACION *******************************************/
 /***********************************************************************************************************/
 
 /***********************************************************************************************************/
