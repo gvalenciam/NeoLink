@@ -22,24 +22,16 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
+      src="js/jquery-3.4.1.js""
     ></script>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/graph.js"></script>
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+
+    <script type="text/javascript" src="js/dashboard.js"></script>
   </head>
   <body>
     <!-- <div class="contenedor-principal">
@@ -149,10 +141,13 @@
         <img src="img/usuario.png" alt="imagen-perfil" class="imagen-perfil" />
         <ul class="lista-menus">
           <li>
-            <a href="#">Gráficos</a>
+            <a id="menu-graficos" class="menu menu-activo">Gráficos</a>
           </li>
           <li>
-            <a href="#">Configuración</a>
+            <a id="menu-imagenes" class="menu">Imágenes</a>
+          </li>
+          <li>
+            <a id="menu-configuracion" class="menu">Configuración</a>
           </li>
         </ul>
       </nav>
@@ -168,77 +163,85 @@
           </div>
           <h1 class="titulo-navbar">NeoLink</h1>
         </div>
-        <div class="contenedor-seccion-graficos">
-          <div class="lista-fundos">
-            <div class="accordion" id="accordionExample">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link boton-fundo"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                    >
-                      Fundo 1
-                    </button>
-                  </h2>
-                </div>
 
-                <div
-                  id="collapseOne"
-                  class="contenido-nodos collapse show"
-                  aria-labelledby="headingOne"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">
-                    <div class="boton-nodo">Nodo 1A</div>
-                    <div class="boton-nodo">Nodo 1B</div>
+        <div class="contenido-seccion">
+          <div
+            id="seccion-graficos"
+            class="seccion seccion-activa contenedor-seccion-graficos"
+          >
+            <div class="lista-fundos">
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-link boton-fundo"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Fundo 1
+                      </button>
+                    </h2>
+                  </div>
+
+                  <div
+                    id="collapseOne"
+                    class="contenido-nodos collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordionExample"
+                  >
+                    <div class="card-body">
+                      <div class="boton-nodo">Nodo 1A</div>
+                      <div class="boton-nodo">Nodo 1B</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="card">
-                <div class="card-header" id="headingTwo">
-                  <h2 class="mb-0">
-                    <button
-                      class="btn btn-link collapsed boton-fundo"
-                      type="button"
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                    >
-                      Fundo 2
-                    </button>
-                  </h2>
-                </div>
-                <div
-                  id="collapseTwo"
-                  class="collapse contenido-nodos"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordionExample"
-                >
-                  <div class="card-body">
-                    <div class="boton-nodo">Nodo 2A</div>
-                    <div class="boton-nodo">Nodo 2B</div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button
+                        class="btn btn-link collapsed boton-fundo"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Fundo 2
+                      </button>
+                    </h2>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="collapse contenido-nodos"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordionExample"
+                  >
+                    <div class="card-body">
+                      <div class="boton-nodo">Nodo 2A</div>
+                      <div class="boton-nodo">Nodo 2B</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="graficos">
+              <svg class="grafico" id="grafico1" width="750" height="500"></svg>
+            </div>
           </div>
-          <div class="graficos">
-            <svg class="grafico" id="grafico1" width="750" height="500"></svg>
+          <div id="seccion-imagenes" class="seccion">
+            <h1>IMAGENES</h1>
+          </div>
+          <div id="seccion-configuracion" class="seccion">
+            <h1>CONFIGURACION</h1>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/dashboard.js"></script>
-    <script src="js/graph.js"></script>
+    
   </body>
 </html>

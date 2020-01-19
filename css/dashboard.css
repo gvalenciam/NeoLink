@@ -10884,16 +10884,21 @@ a[data-toggle="collapse"] {
 }
 
 .sidebar ul > li > a{
-  color: white;
+  color: white !important;
   font-size: 1.6rem;
+  cursor: pointer;
   }
 
 .sidebar ul > li > a:hover{
-color: black;
+  color: black !important;
 }
 
 .sidebar .lista-menus{
   align-self: flex-start;
+}
+
+.sidebar .lista-menus .menu-activo{
+  color: black !important;
 }
 
 .imagen-perfil{
@@ -10914,6 +10919,18 @@ color: black;
 .contenido{
   width: 100%;
   background-color: transparent;
+}
+
+.contenido-seccion{
+  position: relative;
+}
+
+.seccion{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /***********************************************************************************************************/
